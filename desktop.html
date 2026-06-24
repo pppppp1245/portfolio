@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>김수연 Portfolio Desktop</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/desktop.css">
+  <link rel="stylesheet" href="./css/window.css">
+</head>
+<body>
+  <svg class="grain-source" aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0">
+    <defs>
+      <filter id="grain">
+        <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+        <feColorMatrix type="saturate" values="0"/>
+        <feBlend in="SourceGraphic" mode="overlay" result="blend"/>
+        <feComposite in="blend" in2="SourceGraphic" operator="atop"/>
+      </filter>
+    </defs>
+  </svg>
+
+  <main class="desktop-scene" aria-label="포트폴리오 일러스트 데스크톱">
+    <div class="bg-blob blob-pink"></div>
+    <div class="bg-blob blob-purple"></div>
+    <div class="bg-blob blob-yellow"></div>
+    <div class="bg-blob blob-mint"></div>
+
+    <span class="sparkle sparkle-1"></span>
+    <span class="sparkle sparkle-2"></span>
+    <span class="sparkle sparkle-3"></span>
+    <span class="sparkle sparkle-4"></span>
+    <span class="sparkle sparkle-5"></span>
+    <span class="sparkle sparkle-6"></span>
+    <span class="sparkle sparkle-7"></span>
+    <span class="sparkle sparkle-8"></span>
+    <span class="sparkle sparkle-9"></span>
+    <span class="sparkle sparkle-10"></span>
+
+    <button class="desktop-icon character-wrap" id="char-me" type="button" aria-label="About 창 열기">
+      <span class="character">
+        <span class="hair hair-back"></span>
+        <span class="head">
+          <span class="hair hair-top"></span>
+          <span class="hair hair-left"></span>
+          <span class="hair hair-right"></span>
+          <span class="eye eye-left"><i></i></span>
+          <span class="eye eye-right"><i></i></span>
+          <span class="cheek cheek-left"></span>
+          <span class="cheek cheek-right"></span>
+          <span class="mouth"></span>
+        </span>
+        <span class="neck"></span>
+        <span class="body">
+          <span class="collar collar-left"></span>
+          <span class="collar collar-right"></span>
+        </span>
+        <span class="arm arm-left"></span>
+        <span class="arm arm-right"></span>
+      </span>
+      <span class="icon-label">ME →</span>
+    </button>
+
+    <button class="desktop-icon object-icon work-object" id="obj-work" type="button" aria-label="Work 창 열기">
+      <span class="folder-art">
+        <span class="folder-tab"></span>
+        <span class="folder-line line-one"></span>
+        <span class="folder-line line-two"></span>
+        <span class="folder-line line-three"></span>
+        <span class="folder-line line-four"></span>
+      </span>
+      <span class="icon-label">WORK →</span>
+    </button>
+
+    <button class="desktop-icon object-icon notepad-object" id="obj-notepad" type="button" aria-label="Notepad 창 열기">
+      <span class="notepad-art">
+        <span class="spirals">
+          <i></i><i></i><i></i><i></i><i></i><i></i>
+        </span>
+        <span class="note-line note-line-one"></span>
+        <span class="note-line note-line-two"></span>
+        <span class="note-line note-line-three"></span>
+        <span class="note-line note-line-four"></span>
+      </span>
+      <span class="icon-label">NOTE →</span>
+    </button>
+  </main>
+
+  <div class="fullwin" id="window-about">
+    <button class="fullwin-close" type="button" aria-label="About 창 닫기">✕</button>
+    <div class="fullwin-content about-content">
+      <div class="about-grid">
+        <aside class="about-left">
+          <div class="profile-avatar">KSY</div>
+          <h1>김수연</h1>
+          <p>Web Publisher / Designer</p>
+          <div class="sns-links">
+            <a href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://instagram.com/yourname" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </aside>
+
+        <section class="about-right">
+          <p class="section-label">ABOUT ME</p>
+          <p class="bio">
+            안녕하세요. 사용자가 편안하게 머무를 수 있는 웹 경험을 만드는 웹 퍼블리셔 김수연입니다.
+            디자인 의도를 세심하게 읽고, HTML/CSS와 인터랙션으로 화면의 분위기와 사용성을 완성하는 일을 좋아합니다.
+          </p>
+
+          <p class="section-label">SKILLS</p>
+          <div class="skill-tags">
+            <span>Figma</span>
+            <span>Photoshop</span>
+            <span>HTML/CSS</span>
+            <span>JavaScript</span>
+            <span>jQuery</span>
+            <span>GSAP</span>
+            <span>Bootstrap</span>
+            <span>Tailwind</span>
+            <span>React</span>
+            <span>Cursor AI</span>
+          </div>
+
+          <p class="section-label">EXPERIENCE</p>
+          <ul class="experience-list">
+            <li><strong>2024 — 현재</strong><span>○○○ 에이전시 / 웹 퍼블리셔</span></li>
+            <li><strong>2022 — 2024</strong><span>○○○ 스튜디오 / 웹 디자이너</span></li>
+          </ul>
+
+          <p class="section-label">CONTACT</p>
+          <div class="contact-links">
+            <a href="mailto:email@example.com">email@example.com</a>
+            <a href="https://github.com/yourname" target="_blank" rel="noopener">github.com/yourname</a>
+          </div>
+        </section>
+      </div>
+
+      <div class="swiper about-swiper" aria-label="About 이미지 슬라이더">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide about-slide slide-one">Creative Publishing</div>
+          <div class="swiper-slide about-slide slide-two">Responsive Design</div>
+          <div class="swiper-slide about-slide slide-three">Interactive Motion</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fullwin" id="window-work">
+    <button class="fullwin-close" type="button" aria-label="Work 창 닫기">✕</button>
+    <div class="fullwin-content work-content">
+      <header class="work-header">
+        <h1>WORK</h1>
+        <p>Selected Projects — 2022/2025</p>
+      </header>
+      <div class="work-grid" id="work-grid" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <div class="fullwin" id="window-notepad">
+    <button class="fullwin-close" type="button" aria-label="Notepad 창 닫기">✕</button>
+    <div class="fullwin-content notepad-content">
+      <div class="notepad-paper">
+        <div class="notepad-spiral" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="handwritten">
+          <p>Hello, I'm 김수연 :)</p>
+          <p>안녕하세요! 웹 퍼블리셔 김수연입니다.<br>방문해 주셔서 감사합니다.</p>
+          <p>아이콘을 드래그해 보거나, 클릭도 해보세요!</p>
+          <p>
+            📧 <a href="mailto:email@example.com">email@example.com</a><br>
+            🔗 <a href="https://github.com/yourname" target="_blank" rel="noopener">github.com/yourname</a><br>
+            📷 <a href="https://instagram.com/yourname" target="_blank" rel="noopener">@instagram</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/work.js"></script>
+  <script src="./js/windows.js"></script>
+  <script src="./js/desktop.js"></script>
+</body>
+</html>
