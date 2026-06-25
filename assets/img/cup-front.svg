@@ -1,0 +1,36 @@
+<svg width="244" height="238" viewBox="0 0 244 238" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="244" height="238" fill="#B8D4E8"/>
+  
+  <!-- Shadow -->
+  <ellipse cx="122" cy="210" rx="80" ry="12" fill="rgba(0,0,0,0.1)"/>
+  
+  <!-- Cup Body -->
+  <path d="M 80 80 L 75 180 Q 75 195 90 195 L 154 195 Q 169 195 169 180 L 164 80 Z" 
+        fill="#E8F0F8" stroke="#C8D8E8" stroke-width="2"/>
+  
+  <!-- Cup Inner -->
+  <ellipse cx="122" cy="80" rx="42" ry="12" fill="#D0E0F0"/>
+  
+  <!-- Vertical Stripes -->
+  <rect x="90" y="85" width="3" height="105" fill="#D8A0B0" opacity="0.6"/>
+  <rect x="100" y="85" width="3" height="105" fill="#D8A0B0" opacity="0.6"/>
+  <rect x="110" y="85" width="3" height="105" fill="#D8A0B0" opacity="0.6"/>
+  <rect x="120" y="85" width="3" height="105" fill="#D8A0B0" opacity="0.6"/>
+  <rect x="130" y="85" width="3" height="105" fill="#D8A0B0" opacity="0.6"/>
+  <rect x="140" y="85" width="3" height="105" fill="#D8A0B0" opacity="0.6"/>
+  <rect x="150" y="85" width="3" height="105" fill="#D8A0B0" opacity="0.6"/>
+  
+  <!-- Cup Handle -->
+  <path d="M 169 100 Q 195 100 195 130 Q 195 160 169 160" 
+        fill="none" stroke="#C8D8E8" stroke-width="12" stroke-linecap="round"/>
+  <path d="M 169 100 Q 190 100 190 130 Q 190 160 169 160" 
+        fill="none" stroke="#E8F0F8" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Bottom Rim -->
+  <ellipse cx="122" cy="195" rx="39" ry="8" fill="#C8D8E8"/>
+  
+  <!-- Highlights -->
+  <path d="M 85 90 Q 88 120 88 150" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+  <ellipse cx="100" cy="95" rx="8" ry="4" fill="rgba(255,255,255,0.3)"/>
+</svg>
