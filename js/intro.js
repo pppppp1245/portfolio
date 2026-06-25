@@ -1,4 +1,15 @@
+function resetIntroVisibility() {
+  gsap.killTweensOf('body');
+  gsap.set('body', { opacity: 1, clearProps: 'opacity' });
+}
+
 $(function() {
+  resetIntroVisibility();
+
+  window.addEventListener('pageshow', function() {
+    resetIntroVisibility();
+  });
+
   gsap.from('.desk-item', {
     y: 30,
     opacity: 0,

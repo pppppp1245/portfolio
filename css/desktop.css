@@ -492,3 +492,77 @@ body {
     transform: scale(0.7);
   }
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap');
+
+.sticker-wrap,
+.sticker-shape {
+  position: absolute;
+  cursor: grab;
+  user-select: none;
+  z-index: 50;
+}
+.sticker-wrap:active,
+.sticker-shape:active { cursor: grabbing; }
+
+.sticker-wrap {
+  font-family: 'Cherry Bomb One', system-ui;
+  white-space: nowrap;
+  font-size: var(--text-size, 60px);
+  color: var(--text-color, #ffcc33);
+  padding: 14px;
+  -webkit-text-stroke: var(--stroke-w, 26px) #fff;
+  paint-order: stroke fill;
+  filter:
+    drop-shadow(1px 0 var(--text-color, #ffcc33))
+    drop-shadow(-1px 0 var(--text-color, #ffcc33))
+    drop-shadow(0 1px var(--text-color, #ffcc33))
+    drop-shadow(0 -1px var(--text-color, #ffcc33));
+  transition: scale 0.25s, color 0.25s;
+}
+.sticker-wrap:hover { scale: 1.07; color: transparent; }
+.sticker-wrap::before {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  font-family: inherit;
+  font-size: inherit;
+  padding: inherit;
+  background: linear-gradient(40deg, var(--text-color, #ffcc33) 30%, #fff 50%, var(--text-color, #ffcc33) 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: initial;
+  color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+#sticker-text-1 {
+  --text-color: #a78bfa;
+  --text-size: 56px;
+  --stroke-w: 24px;
+  top: 12%;
+  left: 62%;
+  rotate: -8deg;
+}
+#sticker-text-2 {
+  --text-color: #34d399;
+  --text-size: 48px;
+  --stroke-w: 22px;
+  top: 72%;
+  left: 18%;
+  rotate: 6deg;
+}
+
+.sticker-shape { transition: transform 0.25s; }
+.sticker-shape svg {
+  display: block;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));
+}
+.sticker-shape:hover svg { transform: scale(1.1) rotate(8deg); }
+
+#sticker-star { width: 90px; height: 90px; top: 20%; right: 28%; rotate: 15deg; }
+#sticker-heart { width: 75px; height: 75px; top: 65%; right: 12%; rotate: -10deg; }
