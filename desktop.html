@@ -28,11 +28,6 @@
   </svg>
 
   <main class="desktop-scene" aria-label="포트폴리오 일러스트 데스크톱">
-    <div class="bg-blob blob-pink"></div>
-    <div class="bg-blob blob-purple"></div>
-    <div class="bg-blob blob-yellow"></div>
-    <div class="bg-blob blob-mint"></div>
-
     <span class="sparkle sparkle-1"></span>
     <span class="sparkle sparkle-2"></span>
     <span class="sparkle sparkle-3"></span>
@@ -45,50 +40,17 @@
     <span class="sparkle sparkle-10"></span>
 
     <button class="desktop-icon character-wrap" id="char-me" type="button" aria-label="About 창 열기">
-      <span class="character">
-        <span class="hair hair-back"></span>
-        <span class="head">
-          <span class="hair hair-top"></span>
-          <span class="hair hair-left"></span>
-          <span class="hair hair-right"></span>
-          <span class="eye eye-left"><i></i></span>
-          <span class="eye eye-right"><i></i></span>
-          <span class="cheek cheek-left"></span>
-          <span class="cheek cheek-right"></span>
-          <span class="mouth"></span>
-        </span>
-        <span class="neck"></span>
-        <span class="body">
-          <span class="collar collar-left"></span>
-          <span class="collar collar-right"></span>
-        </span>
-        <span class="arm arm-left"></span>
-        <span class="arm arm-right"></span>
-      </span>
+      <img src="./assets/img/ksy.png" alt="" class="desktop-icon-img character-img">
       <span class="icon-label">ME →</span>
     </button>
 
     <button class="desktop-icon object-icon work-object" id="obj-work" type="button" aria-label="Work 창 열기">
-      <span class="folder-art">
-        <span class="folder-tab"></span>
-        <span class="folder-line line-one"></span>
-        <span class="folder-line line-two"></span>
-        <span class="folder-line line-three"></span>
-        <span class="folder-line line-four"></span>
-      </span>
+      <img src="./assets/img/file.png" alt="" class="desktop-icon-img work-img">
       <span class="icon-label">WORK →</span>
     </button>
 
     <button class="desktop-icon object-icon notepad-object" id="obj-notepad" type="button" aria-label="Notepad 창 열기">
-      <span class="notepad-art">
-        <span class="spirals">
-          <i></i><i></i><i></i><i></i><i></i><i></i>
-        </span>
-        <span class="note-line note-line-one"></span>
-        <span class="note-line note-line-two"></span>
-        <span class="note-line note-line-three"></span>
-        <span class="note-line note-line-four"></span>
-      </span>
+      <img src="./assets/img/memo.png" alt="" class="desktop-icon-img memo-img">
       <span class="icon-label">NOTE →</span>
     </button>
 
@@ -185,6 +147,27 @@
         <p>Selected Projects — 2022/2025</p>
       </header>
       <div class="work-grid" id="work-grid" aria-live="polite"></div>
+
+      <article class="project-detail" id="project-detail-hospital" hidden>
+        <button class="project-detail-back" type="button" aria-label="프로젝트 목록으로 돌아가기">← WORK</button>
+        <div class="project-detail-hero">
+          <div class="project-detail-meta">
+            <p class="project-detail-label">Project</p>
+            <h2>병원홈페이지 리뉴얼</h2>
+            <dl>
+              <div><dt>Client</dt><dd>○○○ 병원</dd></div>
+              <div><dt>Role</dt><dd>퍼블리싱 · SEO · 반응형</dd></div>
+              <div><dt>Tools</dt><dd>HTML · CSS · PHP</dd></div>
+            </dl>
+          </div>
+          <div class="project-detail-cover">
+            <img src="./assets/img/works/hospital-renewal-thumb.jpg" alt="병원홈페이지 리뉴얼 메인 화면">
+          </div>
+        </div>
+        <div class="project-detail-body">
+          <img src="./assets/img/works/hospital-renewal-detail.jpg" alt="병원홈페이지 리뉴얼 상세페이지">
+        </div>
+      </article>
     </div>
   </div>
 

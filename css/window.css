@@ -245,9 +245,9 @@
 .project-thumb {
   aspect-ratio: 16 / 9;
   display: flex;
-  align-items: end;
-  justify-content: flex-start;
-  padding: 24px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
   overflow: hidden;
   border-radius: 12px;
   background: #ddd;
@@ -255,6 +255,106 @@
   font-size: clamp(1.4rem, 3vw, 2.6rem);
   font-weight: 900;
   letter-spacing: -0.04em;
+}
+
+.project-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.project-card[data-detail-id] {
+  cursor: pointer;
+}
+
+.project-detail {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+
+.project-detail-back {
+  margin-bottom: 32px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.project-detail-back:hover {
+  transform: translateX(-4px);
+  opacity: 0.88;
+}
+
+.project-detail-hero {
+  display: grid;
+  grid-template-columns: minmax(220px, 280px) 1fr;
+  gap: 48px;
+  align-items: start;
+  margin-bottom: 56px;
+}
+
+.project-detail-label {
+  margin-bottom: 12px;
+  color: #888;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.project-detail-meta h2 {
+  margin-bottom: 28px;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  line-height: 1.2;
+}
+
+.project-detail-meta dl {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.project-detail-meta dt {
+  margin-bottom: 4px;
+  color: #999;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.project-detail-meta dd {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.project-detail-cover {
+  overflow: hidden;
+  border-radius: 16px;
+  background: #f3f3f3;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.1);
+}
+
+.project-detail-cover img,
+.project-detail-body img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.project-detail-body {
+  overflow: hidden;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
 }
 
 .project-info {
@@ -386,6 +486,11 @@
 
   .work-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-detail-hero {
+    grid-template-columns: 1fr;
+    gap: 28px;
   }
 
   .notepad-content {

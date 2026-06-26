@@ -85,6 +85,9 @@ function closeWindow(id) {
     onComplete: function() {
       $win.css('display', 'none');
       gsap.set($win, { y: 0 });
+      if (id === 'window-work' && typeof showProjectList === 'function') {
+        showProjectList();
+      }
     }
   });
 }

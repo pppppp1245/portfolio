@@ -100,16 +100,6 @@ $(function() {
     onComplete: startCharacterFloat
   });
 
-  gsap.to('.bg-blob', {
-    x: 30,
-    y: 20,
-    duration: 6,
-    ease: 'sine.inOut',
-    yoyo: true,
-    repeat: -1,
-    stagger: { each: 1.5 }
-  });
-
   $('#char-me').on('mouseenter', function() {
     gsap.to(this, { scale: 1.03, duration: 0.35, ease: 'power2.out' });
   }).on('mouseleave', function() {

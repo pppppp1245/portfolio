@@ -2,7 +2,9 @@ const projects = [
   {
     title: '병원홈페이지 리뉴얼',
     tags: 'Web | 퍼블리싱 · SEO · PHP · 반응형',
-    gradient: 'linear-gradient(135deg, #667eea, #764ba2)'
+    gradient: 'linear-gradient(135deg, #667eea, #764ba2)',
+    thumb: './assets/img/works/hospital-renewal-thumb.jpg',
+    detailId: 'project-detail-hospital'
   },
   {
     title: '문자팝',
@@ -31,15 +33,25 @@ const projects = [
   }
 ];
 
+function renderThumb(project) {
+  if (project.thumb) {
+    return `<img src="${project.thumb}" alt="${project.title} 썸네일" class="project-thumb-img">`;
+  }
+
+  return `<span>${project.title}</span>`;
+}
+
 function renderProjects() {
   const $grid = $('#work-grid');
   if (!$grid.length) return;
 
-  const cards = projects.map(function(project) {
+  const cards = projects.map(function(project, index) {
+    const detailAttr = project.detailId ? ` data-detail-id="${project.detailId}"` : '';
+
     return `
-      <article class="project-card">
+      <article class="project-card"${detailAttr} data-project-index="${index}">
         <div class="project-thumb" style="background:${project.gradient}">
-          <span>${project.title}</span>
+          ${renderThumb(project)}
         </div>
         <div class="project-info">
           <h2>${project.title}</h2>
@@ -52,4 +64,26 @@ function renderProjects() {
   $grid.html(cards);
 }
 
-$(renderProjects);
+function showProjectList() {
+  $('.work-header, #work-grid').show();
+  $('.project-detail').attr('hidden', true);
+}
+
+function showProjectDetail(detailId) {
+  $('.work-header, #work-grid').hide();
+  $('.project-detail').attr('hidden', true);
+  $('#' + detailId).removeAttr('hidden');
+  $('#window-work .fullwin-content').scrollTop(0);
+}
+
+window.showProjectList = showProjectList;
+
+$(function() {
+  renderProjects();
+
+  $('#work-grid').on('click', '.project-card[data-detail-id]', function() {
+    showProjectDetail($(this).data('detail-id'));
+  });
+
+  $('.project-detail-back').on('click', showProjectList);
+});
