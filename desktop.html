@@ -28,6 +28,7 @@
   </svg>
 
   <main class="desktop-scene" aria-label="포트폴리오 일러스트 데스크톱">
+    <img class="desktop-bg" src="./assets/img/works/BG.png" alt="" aria-hidden="true">
     <span class="sparkle sparkle-1"></span>
     <span class="sparkle sparkle-2"></span>
     <span class="sparkle sparkle-3"></span>
@@ -105,21 +106,7 @@
           <div class="skill-tags">
             <span>Figma</span>
             <span>Photoshop</span>
-            <span>HTML/CSS</span>
-            <span>JavaScript</span>
-            <span>jQuery</span>
-            <span>GSAP</span>
-            <span>Bootstrap</span>
-            <span>Tailwind</span>
-            <span>React</span>
-            <span>Cursor AI</span>
           </div>
-
-          <p class="section-label">EXPERIENCE</p>
-          <ul class="experience-list">
-            <li><strong>2024 — 현재</strong><span>○○○ 에이전시 / 웹 퍼블리셔</span></li>
-            <li><strong>2022 — 2024</strong><span>○○○ 스튜디오 / 웹 디자이너</span></li>
-          </ul>
 
           <p class="section-label">CONTACT</p>
           <div class="contact-links">
@@ -127,14 +114,6 @@
             <a href="https://github.com/yourname" target="_blank" rel="noopener">github.com/yourname</a>
           </div>
         </section>
-      </div>
-
-      <div class="swiper about-swiper" aria-label="About 이미지 슬라이더">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide about-slide slide-one">Creative Publishing</div>
-          <div class="swiper-slide about-slide slide-two">Responsive Design</div>
-          <div class="swiper-slide about-slide slide-three">Interactive Motion</div>
-        </div>
       </div>
     </div>
   </div>
@@ -165,7 +144,54 @@
           </div>
         </div>
         <div class="project-detail-body">
-          <img src="./assets/img/works/hospital-renewal-detail.jpg" alt="병원홈페이지 리뉴얼 상세페이지">
+          <img class="hospital-renewal-detail" src="./assets/img/works/hospital-renewal-detail.jpg" alt="병원홈페이지 리뉴얼 상세페이지">
+        </div>
+      </article>
+
+      <article class="project-detail" id="project-detail-landing" hidden>
+        <button class="project-detail-back" type="button" aria-label="프로젝트 목록으로 돌아가기">← WORK</button>
+        <div class="project-detail-hero">
+          <div class="project-detail-meta">
+            <p class="project-detail-label">Project</p>
+            <h2>TOCK 랜딩페이지</h2>
+            <dl>
+              <div><dt>Client</dt><dd>TOCK (영어 학습 앱)</dd></div>
+              <div><dt>Role</dt><dd>디자인 · 퍼블리싱 · 반응형</dd></div>
+              <div><dt>Tools</dt><dd>HTML · CSS · Swiper · AOS</dd></div>
+            </dl>
+            <a class="project-site-btn" href="./works/landing/index.html" target="_blank" rel="noopener">사이트 보기 →</a>
+          </div>
+          <div class="device-preview-stage" aria-label="반응형 미리보기">
+            <div class="device-preview-mockup-wrap">
+              <div class="device-mockup mockup-pc" id="landing-mockup">
+                <div class="mockup-body">
+                  <div class="mockup-notch" aria-hidden="true"></div>
+                  <div class="mockup-screen">
+                    <iframe id="landing-preview-iframe" src="./works/landing/index.html" title="TOCK 랜딩 미리보기" loading="lazy"></iframe>
+                  </div>
+                </div>
+                <div class="mockup-stand" aria-hidden="true">
+                  <span class="mockup-stand-neck"></span>
+                  <span class="mockup-stand-base"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="device-switcher" role="tablist" aria-label="디바이스 선택">
+              <button class="device-switch is-active" type="button" data-device="pc" role="tab" aria-selected="true" aria-label="PC">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><line x1="8" y1="21" x2="16" y2="21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="12" y1="17" x2="12" y2="21" stroke="currentColor" stroke-width="1.8"/></svg>
+                <span>PC</span>
+              </button>
+              <button class="device-switch" type="button" data-device="tablet" role="tab" aria-selected="false" aria-label="Tablet">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="18.5" r="0.8" fill="currentColor"/></svg>
+                <span>Tablet</span>
+              </button>
+              <button class="device-switch" type="button" data-device="mobile" role="tab" aria-selected="false" aria-label="Mobile">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><line x1="10" y1="5" x2="14" y2="5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                <span>Mobile</span>
+              </button>
+            </div>
+          </div>
         </div>
       </article>
     </div>

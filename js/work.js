@@ -7,9 +7,11 @@ const projects = [
     detailId: 'project-detail-hospital'
   },
   {
-    title: '문자팝',
-    tags: 'Web | 디자인 · 퍼블리싱 · SEO · 유지보수',
-    gradient: 'linear-gradient(135deg, #f093fb, #f5576c)'
+    title: 'TOCK 랜딩페이지',
+    tags: 'Landing Page | HTML · CSS · Swiper · AOS · 반응형',
+    gradient: 'linear-gradient(135deg, #f093fb, #f5576c)',
+    thumb: './works/landing/assets/images/kv-image.png',
+    detailId: 'project-detail-landing'
   },
   {
     title: '뷰티 브랜드 랜딩페이지',
@@ -64,6 +66,51 @@ function renderProjects() {
   $grid.html(cards);
 }
 
+const LANDING_DEVICES = {
+  pc: { width: 1280, height: 900 },
+  tablet: { width: 768, height: 1024 },
+  mobile: { width: 375, height: 812 }
+};
+
+let currentLandingDevice = 'pc';
+
+function fitLandingMockup() {
+  const mockup = document.getElementById('landing-mockup');
+  const screen = mockup && mockup.querySelector('.mockup-screen');
+  const iframe = document.getElementById('landing-preview-iframe');
+  if (!screen || !iframe) return;
+
+  const preset = LANDING_DEVICES[currentLandingDevice];
+  const scale = screen.clientWidth / preset.width;
+
+  iframe.style.width = preset.width + 'px';
+  iframe.style.height = preset.height + 'px';
+  iframe.style.transform = 'scale(' + scale + ')';
+  screen.style.height = Math.round(preset.height * scale) + 'px';
+}
+
+function setLandingDevice(device) {
+  const mockup = document.getElementById('landing-mockup');
+  if (!mockup || !LANDING_DEVICES[device]) return;
+
+  currentLandingDevice = device;
+  mockup.className = 'device-mockup mockup-' + device;
+
+  $('.device-switch')
+    .removeClass('is-active')
+    .attr('aria-selected', 'false');
+  $('.device-switch[data-device="' + device + '"]')
+    .addClass('is-active')
+    .attr('aria-selected', 'true');
+
+  requestAnimationFrame(fitLandingMockup);
+  setTimeout(fitLandingMockup, 460);
+}
+
+function initLandingPreview() {
+  setLandingDevice('pc');
+}
+
 function showProjectList() {
   $('.work-header, #work-grid').show();
   $('.project-detail').attr('hidden', true);
@@ -74,6 +121,10 @@ function showProjectDetail(detailId) {
   $('.project-detail').attr('hidden', true);
   $('#' + detailId).removeAttr('hidden');
   $('#window-work .fullwin-content').scrollTop(0);
+
+  if (detailId === 'project-detail-landing') {
+    requestAnimationFrame(initLandingPreview);
+  }
 }
 
 window.showProjectList = showProjectList;
@@ -86,4 +137,14 @@ $(function() {
   });
 
   $('.project-detail-back').on('click', showProjectList);
+
+  $('.device-switch').on('click', function() {
+    setLandingDevice($(this).data('device'));
+  });
+
+  $(window).on('resize', function() {
+    if (!$('#project-detail-landing').is('[hidden]')) {
+      fitLandingMockup();
+    }
+  });
 });

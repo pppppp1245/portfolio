@@ -1,30 +1,5 @@
-let aboutSwiper = null;
-
-function initAboutSwiper() {
-  if (aboutSwiper || typeof Swiper === 'undefined') return;
-
-  aboutSwiper = new Swiper('.about-swiper', {
-    loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 2.5,
-    spaceBetween: 20,
-    breakpoints: {
-      0: {
-        slidesPerView: 1.1
-      },
-      768: {
-        slidesPerView: 2.5
-      }
-    }
-  });
-}
-
 function animateWindowContent(id) {
   if (id === 'window-about') {
-    initAboutSwiper();
     gsap.from('.about-left', {
       x: -60,
       opacity: 0,

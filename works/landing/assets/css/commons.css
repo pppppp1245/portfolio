@@ -1,0 +1,245 @@
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SchoolSafetyTteokbokki';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2510-1@1.0/HakgyoansimTTeokbokkiB.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+.logo-title a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-title {
+    font-family: 'Pretendard';
+    font-size: 16px;
+    font-weight: 900;
+    color: #1C49FF
+}
+
+.navi a {
+    font-family: 'Pretendard';
+    font-size: 18px;
+    font-weight: 600;
+    color: #141A33;
+}
+
+.main-ft {
+    font-family: 'Pretendard';
+    font-size: 85px;
+    font-weight: 900;
+}
+
+.main-ft_2 {
+    font-family: 'SchoolSafetyTteokbokki';
+    font-size: 85px;
+    font-weight: normal;
+}
+
+.font-m-color {
+    color: #fff;
+}
+
+.font-2-color {
+    color: #F4F974;
+}
+
+.font-3-color {
+    color: #F3B543;
+}
+
+.font-2-rotation {
+    display: inline-block;
+    transform: rotate(-20.93deg)
+}
+
+.font-3-rotation {
+    display: inline-block;
+    transform: rotate(15deg);
+}
+
+.margin-span {
+    margin-right: -8px;
+}
+
+.span-top {
+    display: inline-block;
+    position: relative;
+    top: -13px;
+}
+
+.btn-color {
+    background-color: #fff;
+}
+
+.btn-size {
+    width: 282px;
+    height: 72px;
+}
+
+.btn-radius {
+    border-radius: 10px;
+}
+
+.btn-ft {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 26px;
+}
+
+.btn-ft-color {
+    color: #141A33;
+}
+
+.mg {
+    margin-bottom: 27.5px;
+}
+
+/* .service-title{
+    font-weight: 500;
+    color: #141A33;
+    line-height: 57px;
+    margin: 84px 864px 54px 510px;
+}
+
+.service-m{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font-weight: 500;
+}
+
+.service-a{
+    list-style: disc;
+    line-height: 21px; 
+    color: #fff;
+    font-weight: 400;
+}
+
+.service-number{
+    position: absolute;
+} */
+
+/* .rv-tt {
+    font-size: 48px;
+    font-family: 'Pretendard';
+    font-weight: 600;
+    color: #1c49ff;
+    line-height: 57px;
+    letter-spacing: -1.5%;
+} */
+
+/* 폰트 사이즈 */
+.h1-font {
+    font-size: 85px;
+    font-family: 'Pretendard';
+}
+
+.h2-font {
+    font-size: 48px;
+    font-family: 'Pretendard';
+}
+
+.h3-font {
+    font-size: 40px;
+    font-family: 'Pretendard';
+}
+
+.h4-font {
+    font-size: 26px;
+    font-family: 'Pretendard';
+}
+
+.h5-font {
+    font-size: 22px;
+    font-family: 'Pretendard';
+}
+
+.h6-font {
+    font-size: 18px;
+    font-family: 'Pretendard';
+}
+
+.p-font {
+    font-size: 16px;
+    font-family: 'Pretendard';
+}
+
+/* 색상 */
+
+.main-bg-color{
+    background-color: #1C49FF;
+}
+
+/* 레이아웃 */
+
+.d-flex{
+    display: flex;
+}
+/* img{
+    width: 100%;
+} */
